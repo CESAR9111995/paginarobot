@@ -1,0 +1,50 @@
+body{
+    background-color: #212449;
+    background-position: center center;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    text-align: center;
+    color: aqua;
+    font-family: sans-serif;
+    margin-top: 100px;
+} p{
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.cont-general{
+width: 40%;
+height: auto;
+margin: 0 auto;
+margin-top: 100px;
+display: flex;
+} .cont-general .cont-controles{
+  width: 20%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} .cont-general .cont-controles button{
+    margin-bottom: 30px;
+    background-color: #0BEDF4;
+    border: none;
+    color: #212449;
+    font-family: sans-serif;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+}  .cont-general .cont-controles button:hover{
+    cursor: pointer;
+    background-color: #212449;
+    color: #0BEDF4  ;
+}
+.cont-general .animacion-lottie{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
+}
