@@ -1,50 +1,752 @@
-body{
-    background-color: #212449;
-    background-position: center center;
+body {
+    background-color: #070707;
+    /* Cambia los colores hexadecimales según desees */
     margin: 0;
     padding: 0;
-}
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
 
-h1{
-    text-align: center;
-    color: aqua;
-    font-family: sans-serif;
-    margin-top: 100px;
-} p{
-    text-align: center;
-    font-family: sans-serif;
+
+  /***************************VIDEO BANNER************************************************/
+  .video-fondo {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Esto asegura que el video ocupe toda la pantalla */
+    overflow: hidden;
+    margin-top: 0px;
+  }
+  
+  .video-fondo video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Esto garantiza que el video cubra todo el área del div */
+  }
+
+  /*******************logo animado***************************/
+  .video-fondo .logo-animado{
+    width: 30%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: -50px;
+    z-index: 10;
+  }
+
+  /******************MENU*********************/
+  .video-fondo nav{
+    width: 80%;
+    height: auto;
+    padding: 0;
+    right: 10%;
+    top: 20%;
+    z-index: 10;
+    position: absolute;
+  }   .video-fondo nav ul{
+    display: flex;
+    list-style: none;
+  } .video-fondo nav ul li{
+    width: auto;
+    margin-left:20px;
     color: white;
     font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: all 0.5s;
+  } .video-fondo nav ul li:hover{
+    cursor: pointer;
+    background-color: #089bf4;
+    padding: 5px;
+    border-radius: 10px;
+  }
+
+  /*************************TEXTO ANIMADO BANNER****************************************************/
+
+  .ml12 {
+    font-weight: 200;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    color: white;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-top: 30px;
+  }
+  
+  .ml12 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+/*************************TEXTO PRESENTACION***********************************/
+.video-fondo .text-presentacion{
+    width: 30%;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    left: 10%;
+    top: 50%;
 }
-.cont-general{
-width: 40%;
-height: auto;
-margin: 0 auto;
-margin-top: 100px;
-display: flex;
-} .cont-general .cont-controles{
-  width: 20%;
+/*********************BOTON MULTIMEDIA********************************/
+
+.video-fondo .boton-multimedia{
+    width: 30%;
+    height: 50px;
+    background-color: #089bf4;
+    top: 80%;
+    left: 10%;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    z-index: 1;
+    position: absolute;
+    font-size: 20px;
+    transition: all 1s;
+} .video-fondo .boton-multimedia:hover{
+cursor: pointer;
+color: #089bf4;
+    background-color: white;
+}
+  
+/****************************ANIMACION APPS*********************************/
+
+.video-fondo .animacion-aps{
+    width: 50%;
+    height: auto;
+    padding: 0;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-right: 5%;
+    z-index: 12;
+  }
+
+  .imagen-chicaRV{
+    width: 30%;
+    height: 300px;
+    margin-left: 55%;
+    margin-top: -30px;
+    position: absolute;
+    z-index: 1;
+  }
+
+/*******************************CONTENIDO DISEÑO MULTIMEDIA**************************************/
+
+  .diseño-multimedia{
+width: 100%;
+height: 1000px;
+background-image: linear-gradient(to right, #0B2093, #5A065E);
+margin-top: 0px;
+position: relative;
+
+  }
+
+  /***********************TITULO DISEÑO MULTIMEIA***************************************/
+
+  .ml1 {
+    font-weight: 900;
+    font-size: 3.5em;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   top: 100px;
+   left: 10%;
+  }
+  
+  .ml1 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+  
+  .ml1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em;
+    padding-bottom: 0.15em;
+  }
+  
+  .ml1 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: 0 0;
+  }
+  
+  .ml1 .line1 { top: 0; }
+  .ml1 .line2 { bottom: 0; }
+
+  /************************iconos SONIDO IMAGEN E INTERACTIVIDAD*****************************************/
+
+  .cont-animaciones{
+   width: 40%;
+   height: auto;
+   display: flex;
+   position: absolute;
+   top: 250px;
+   left: 10%;
+   justify-content: center;
+  } .cont-animaciones .cont-animacion1{
+    width: 30%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+  }  .cont-animaciones .cont-animacion1 p{
+color: white;
+text-align: center;
+font-family: sans-serif;
+font-size: 20px;
+margin-top: 50px;
+  }
+  
+  .cont-animaciones .cont-animacion1 .animacion-imagen{
+    transform: scale(2);
+    margin-top: 50px;
+  } 
+
+  .cont-animaciones .cont-animacion1 .animacion-sonido{
+    transform: scale(2);
+    margin-top: 50px;
+  }
+
+  .cont-animaciones .cont-animacion1 .animacion-interactividad{
+    transform: scale(2);
+    margin-top: 50px;
+  }
+
+  /****************************TEXTO MULTIMEDIA************************************/
+
+  .texto-multimedia1{
+    width: 40%;
+    position: absolute;
+    color: WHITE;
+    top: 300px;
+    right: 2%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  } .texto-multimedia2{
+    width: 80%;
+    position: absolute;
+    color: WHITE;
+    top: 500px;
+    left: 10%;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /********************************ANIMACIONES 2 MULTIMEDIA******************************************************/
+
+  .cont-animaciones2{
+    width: 50%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    top: 650px;
+    left: 25%;
+    justify-content: center;
+   } .cont-animaciones2 .cont-animacion2{
+     width: 30%;
+     height: 200px;
+     display: flex;
+     flex-direction: column;
+     margin-left: 20px;
+   }  .cont-animaciones2 .cont-animacion2 p{
+ color: white;
+ text-align: center;
+ font-family: sans-serif;
+ font-size: 20px;
+ margin-top: 50px;
+   }
+   
+   .cont-animaciones2 .cont-animacion2 .animacion-PCWEB{
+     transform: scale(2);
+     margin-top: 30px;
+   } 
+ 
+   .cont-animaciones2 .cont-animacion2 .animacion-PCIMAGEN{
+     transform: scale(2);
+     margin-top: 50px;
+   }
+ 
+   .cont-animaciones2 .cont-animacion2 .animacion-PCVIDEO{
+     transform: scale(2);
+     margin-top: 50px;
+   }
+
+
+   /**************************CONOCIMIENTOS************************************/
+
+   .conocimientos{
+    width: 100%;
+    height: 1050px;
+    background-image: linear-gradient(to right, #0B2093, #5A065E);
+margin-top: 0px;
+position: relative;
+   }
+
+
+   /*****************TITULO CONOCIMIENTOS**************************/
+
+   .ml2 {
+    font-weight: 900;
+    font-size: 3.5em;
+    position: absolute;
+    top: 0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    left: 10%;
+  }
+  
+  .ml2 .letter {
+    display: inline-block;
+    line-height: 1em;
+  }
+
+  /*****************************ANIMACION CONOCIMIENTOS***********************************/
+
+  .conocimientos .animacion-conocimientos{
+    transform: scale(0.5);
+    position: absolute;
+    top: -400px;
+    left: -10%;
+    
+  }
+
+  /********************************CONTENEDRO HABILIDADES************************************/
+
+  .cont-gen-habilidades {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    right: 10%;
+}  
+
+.cont-gen-habilidades .habilidades-web {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: white;
+    border: 3px solid white;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px); /* El valor define el grado de desenfoque */
+    border-radius: 20px;
+    -webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+}
+
+.cont-gen-habilidades .habilidades-web h2 {
+  color: #545454;
+  text-align: center;
+    font-family: sans-serif;
+}
+
+.cont-gen-habilidades .habilidades-web .cont-apps {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont-gen-habilidades .habilidades-web .cont-apps img:first-child {
+  width: 70px;
+  height: 70px;
+  /* Otros estilos que desees aplicar a la primera imagen */
+}
+
+.cont-gen-habilidades .habilidades-web .cont-apps img {
+    width: 60px;
+    height: 70px;
+    transition: all 0.5s;
+} .cont-gen-habilidades .habilidades-web .cont-apps .img-app:hover{
+  transform: scale(1.2);
+}
+
+
+
+.cont-gen-habilidades .habilidades-diseño-video {
+  width: 90%;
+  height: auto;
+  display: flex;
+  border-radius: 20px;
+  flex-direction: column;
+  padding: 10px;
+  background-color: white;
+  border: 3px solid white;
+  margin-bottom: 30px;
+  backdrop-filter: blur(5px); /* El valor define el grado de desenfoque */
+  -webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+}
+
+.cont-gen-habilidades .habilidades-diseño-video h2 {
+  color: #545454;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.cont-gen-habilidades .habilidades-diseño-video .cont-apps {
+  display: flex;
+  justify-content: space-between;
+}
+.cont-gen-habilidades .habilidades-diseño-video .cont-apps img:first-child {
+  width: 70px;
+  height: 70px;
+  /* Otros estilos que desees aplicar a la primera imagen */
+}
+.cont-gen-habilidades .habilidades-diseño-video .cont-apps img {
+  width: 120px;
+  height: 70px;
+  transition: all 0.5s;
+} .cont-gen-habilidades .habilidades-diseño-video .cont-apps .img-app:hover{
+  transform: scale(1.2);
+}
+
+
+
+
+
+.cont-gen-habilidades .habilidades-diseño-ui {
+  width: 90%;
   height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-} .cont-general .cont-controles button{
-    margin-bottom: 30px;
-    background-color: #0BEDF4;
-    border: none;
-    color: #212449;
-    font-family: sans-serif;
-    font-weight: 700;
-    padding: 10px;
-    border-radius: 10px;
-}  .cont-general .cont-controles button:hover{
-    cursor: pointer;
-    background-color: #212449;
-    color: #0BEDF4  ;
+  padding: 10px;
+  border: 3px solid white;
+  background-color: white;
+  border-radius: 20px;
+  backdrop-filter: blur(5px); /* El valor define el grado de desenfoque */
+  -webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
 }
-.cont-general .animacion-lottie{
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
+
+.cont-gen-habilidades .habilidades-diseño-ui h2 {
+  color: #545454;
+  text-align: center;
+  font-family: sans-serif;
 }
+
+.cont-gen-habilidades .habilidades-diseño-ui .cont-apps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cont-gen-habilidades .habilidades-diseño-ui .cont-apps img {
+  width: 100px;
+  height: 100px;
+  transition: all 0.5s;
+
+}
+
+.cont-gen-habilidades .habilidades-diseño-ui .cont-apps .img-app:hover{
+  transform: scale(1.2);
+}
+
+/*******************************CONTENEDOR EXPERIENCIA**************************************************/
+
+.contenedor-experiencia{
+  width: 100%;
+  height: 550px;
+  background-image: linear-gradient(to right, #0B2093, #5A065E);
+margin-top: 0px;
+position: relative;
+}  
+
+.contenedor-experiencia .ml1 {
+  font-weight: 900;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    left: 35%;
+}
+
+.contenedor-experiencia .ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.contenedor-experiencia .ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.contenedor-experiencia .ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.contenedor-experiencia .ml1 .line1 { top: 0; }
+.contenedor-experiencia .ml1 .line2 { bottom: 0; }
+
+
+.contenedor-experiencia .cont-logos{
+width: 40%;
+height: auto;
+display: flex;
+position: absolute;
+top: 300px;
+left: 15%;
+}
+
+.contenedor-experiencia .cont-logos img{
+width: 200px;
+height: 200px;
+}
+
+/*********************************CONTENEDOR EXP WEB*********************************************/
+
+.cont-gen-webexp{
+  width: 100%;
+  height: 1800px;
+  background-image: linear-gradient(to right, #0B2093, #5A065E);
+margin-top: 0px;
+position: relative;
+}  
+.cont-gen-webexp .cont-webs{
+width: 70%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+position: absolute;
+top: 300px;
+left: 15%;
+}
+
+.cont-gen-webexp .cont-webs .cont-webexp{
+width: 40%;
+height: auto;
+background-color: white;
+border-radius: 20px 20px 0px 0px;
+padding: 10px;
+margin-bottom: 30px;
+-webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+}  .cont-gen-webexp .cont-webs .cont-webexp img{
+width: 100%;
+height: 200px;
+}
+
+.cont-gen-webexp .cont-webs .cont-webexp h2{
+color: #323131;
+font-size: 20px;
+font-weight: 750;
+font-family: sans-serif;
+}
+
+.cont-gen-webexp .cont-webs .cont-webexp h3{
+color: black;
+font-size: 20px;
+font-family: sans-serif;
+}
+
+.cont-gen-webexp .cont-webs .cont-webexp p{
+  font-family: sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.cont-gen-webexp .cont-webs .cont-webexp a .boton-webexp{
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: #19B6F6;
+  color: white;
+  margin: 0;
+  bottom: 0px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transition: all 1s;
+}
+
+.cont-gen-webexp .cont-webs .cont-webexp a .boton-webexp:hover{
+cursor: pointer;
+}
+
+.cont-gen-webexp .texto-desc{
+color: white;
+font-family: sans-serif;
+font-size: 20px;
+position: absolute;
+top: 200px;
+left: 20%;
+}
+.cont-gen-webexp .ml1 {
+  font-weight: 900;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    left: 35%;
+}
+
+.cont-gen-webexp .ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.cont-gen-webexp .ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.cont-gen-webexp .ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.cont-gen-webexp .ml1 .line1 { top: 0; }
+.cont-gen-webexp .ml1 .line2 { bottom: 0; }
+
+
+/*********************************CONTENEDOR PROYECTOS WEB*********************************************/
+
+.cont-gen-webpersonales{
+  width: 100%;
+  height: 1800px;
+  background-image: linear-gradient(to right, #0B2093, #5A065E);
+margin-top: 0px;
+position: relative;
+}  
+.cont-gen-webpersonales .cont-webspersonales{
+width: 70%;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+position: absolute;
+top: 300px;
+left: 15%;
+}
+
+.cont-gen-webpersonales .cont-webspersonales .cont-webexpper{
+width: 40%;
+height: auto;
+background-color: white;
+border-radius: 20px 20px 0px 0px;
+padding: 10px;
+margin-bottom: 30px;
+-webkit-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 13px 0px rgba(0,0,0,0.75);
+}  .cont-gen-webpersonales .cont-webspersonales .cont-webexpper img{
+width: 100%;
+height: 200px;
+}
+
+.cont-gen-webpersonales .cont-webspersonales .cont-webexpper h2{
+color: #323131;
+font-size: 20px;
+font-weight: 750;
+font-family: sans-serif;
+}
+
+.cont-gen-webpersonales .cont-webspersonales .cont-webexpper h3{
+color: black;
+font-size: 20px;
+font-family: sans-serif;
+}
+
+.cont-gen-webpersonales .cont-webspersonales .cont-webexpper p{
+  font-family: sans-serif;
+  font-size: 15px;
+  text-align: justify;
+}
+
+.cont-gen-webpersonales .cont-webspersonales .cont-webexpper a .boton-webexp{
+  width: 100%;
+  height: auto;
+  border: none;
+  background-color: #19B6F6;
+  color: white;
+  margin: 0;
+  bottom: 0px;
+  text-decoration: none;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  font-family: sans-serif;
+  font-weight: 600;
+  transition: all 1s;
+}
+
+.cont-gen-webpersonales .cont-webspersonales .cont-webexpper a .boton-webexp:hover{
+cursor: pointer;
+}
+
+.cont-gen-webpersonales .texto-desc{
+color: white;
+font-family: sans-serif;
+font-size: 20px;
+position: absolute;
+top: 200px;
+left: 20%;
+}
+.cont-gen-webpersonales .ml1 {
+  font-weight: 900;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    left: 30%;
+}
+
+.cont-gen-webpersonales .ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.cont-gen-webpersonales .ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.cont-gen-webpersonales .ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.cont-gen-webpersonales .ml1 .line1 { top: 0; }
+.cont-gen-webpersonales .ml1 .line2 { bottom: 0; }
+
